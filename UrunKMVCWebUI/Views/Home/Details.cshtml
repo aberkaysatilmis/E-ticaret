@@ -1,0 +1,81 @@
+﻿@using UrunKMVCWebUI.Entity;
+@model Product
+@{
+    ViewBag.Title = "Details";
+}
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/theme/image/camera.jpg" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Model.Name</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span class="badge text-bg-primary">In Stock</span>
+                <span class="product-number">#015667</span>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="description">
+                    @Model.Description
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half" aria-hidden="true"></i>
+                <span class="badge text-bg-success">67</span>
+            </div>
+            <div id="write-review" class="col-md-4">
+                <a href="#">  Write a review  </a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <h4 id="product-price">@Model.Price TL</h4>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <button class="btn btn-success">
+                    <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="bd-example">
+            <nav>
+                <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Description</button>
+                    <button class="nav-link" id="nav-payment-tab" data-bs-toggle="tab" data-bs-target="#nav-payment" type="button" role="tab" aria-controls="nav-payment" aria-selected="false" tabindex="-1">Payment Methots</button>
+                    <button class="nav-link" id="nav-comment-tab" data-bs-toggle="tab" data-bs-target="#nav-comment" type="button" role="tab" aria-controls="nav-comment" aria-selected="false" tabindex="-1">Reviews</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade active show" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab" tabindex="0">
+                    <p>This is some placeholder content the <strong>Description tab's</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-payment" role="tabpanel" aria-labelledby="nav-payment-tab" tabindex="0">
+                    <p>This is some placeholder content the <strong>Payment Methots tab's</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-comment" role="tabpanel" aria-labelledby="nav-comment-tab" tabindex="0">
+                    <p>This is some placeholder content the <strong>Comment tab's</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+#jumbotron{
+    background-image: url(../image/home-bg.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+    padding: 60px 15px 0;
+  }
+
+#write-review{
+    margin-left: -30px;
+}
+
+#product-price{
+    font-size: 28px;
+    color: green;
+
+}
