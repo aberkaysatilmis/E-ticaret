@@ -15,7 +15,7 @@ namespace UrunKMVCWebUI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(_context.Products.Where(i=> i.IsHome && i.IsApproved).ToList());
+           return View(_context.Products.Where(i=> i.IsHome).ToList());
         }
         public ActionResult Details(int id)
         {
@@ -23,7 +23,7 @@ namespace UrunKMVCWebUI.Controllers
         }
         public ActionResult List()
         {
-            return View(_context.Products.Where(i => i.IsApproved).ToList());
+           return View(_context.Products.Where(i=> i.IsApproved).ToList());
         }
     }
 }
