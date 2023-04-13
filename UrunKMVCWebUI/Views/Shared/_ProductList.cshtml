@@ -1,0 +1,28 @@
+﻿@using UrunKMVCWebUI.Entity;
+@model IEnumerable<Product>
+
+<div class="container pb-5">
+    <div class="row">
+        @foreach (var urun in Model)
+        {
+            <div class="col-md-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="~/Upload/@urun.Image" alt="@urun.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="/Home/Details/@urun.Id">
+                                    @urun.Name
+                                </a>
+                            </h5>
+                            <p class="card-text">@urun.Description</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">@urun.Price</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

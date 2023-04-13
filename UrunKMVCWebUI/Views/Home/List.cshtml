@@ -3,42 +3,21 @@
 @{
     ViewBag.Title = "List";
 }
-
-<div class="row">
-    <div class="col-md-3">
-        <div class="bd-example">
-            <ul class="list-group">
-                <li class="list-group-item active" aria-current="true">An active item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
-            </ul>
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bd-example">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">An active item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="row">
-            @foreach (var urun in Model)
-            {
-                <div class="col-md-4 mb-3">
-                    <div class="col">
-                        <div class="card h-100">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>@urun.Name</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="/Home/Details/@urun.Id">
-                                        @urun.Name
-                                    </a>
-                                </h5>
-                                <p class="card-text">@urun.Description</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">@urun.Price</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
+        <div class="col-md-9">
+            @Html.Partial("_ProductList", Model)
         </div>
     </div>
 </div>
