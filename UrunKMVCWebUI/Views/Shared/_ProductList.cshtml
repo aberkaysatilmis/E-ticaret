@@ -1,11 +1,10 @@
-﻿@using UrunKMVCWebUI.Entity;
-@model IEnumerable<Product>
-
+﻿@using UrunKMVCWebUI.Models;
+@model IEnumerable<ProductModel>
 <div class="container pb-5">
     <div class="row">
         @foreach (var urun in Model)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <div class="col">
                     <div class="card h-100">
                         <img class="card-img-top" src="~/Upload/@urun.Image" alt="@urun.Name" />
