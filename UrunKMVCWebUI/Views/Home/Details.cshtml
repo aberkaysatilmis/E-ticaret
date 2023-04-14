@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<div class="container pb-5 mt-5">
+<div id="product-details" class="container pb-5 mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="~/theme/image/camera.jpg" class="img-fluid rounded">
+            <img src="~/Upload/@Model.Image" class="img-fluid rounded" alt=""@Model.Name"">
         </div>
         <div class="col-md-6">
             <div class="row">
@@ -17,7 +17,16 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <span class="badge text-bg-primary">In Stock</span>
+
+                    @if (Model.IsApproved)
+                    {
+                        <span class="badge text-bg-primary">Stokta</span>
+                    }
+                    else
+                    {
+                        <span class="badge text-bg-danger">Stokta Yok</span>
+                    }
+
                     <span class="product-number">#015667</span>
                 </div>
             </div>
@@ -28,10 +37,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-5">
                 <div class="col-md-4">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star" aria-hidden="true"></i>
                     <i class="fa-solid fa-star-half" aria-hidden="true"></i>

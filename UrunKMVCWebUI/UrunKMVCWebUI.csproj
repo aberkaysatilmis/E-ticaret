@@ -108,6 +108,7 @@
     <Content Include="Upload\3.jpg" />
     <Content Include="Upload\4.jpg" />
     <Content Include="Upload\5.jpg" />
+    <Content Include="Upload\default.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +134,7 @@
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Shared\_ProductList.cshtml" />
+    <Content Include="Views\Home\GetCategories.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
