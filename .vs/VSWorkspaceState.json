@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\UrunKMVCWebUI",
+    "\\UrunKMVCWebUI\\Views",
+    "\\UrunKMVCWebUI\\Views\\Product"
   ],
-  "SelectedNode": "\\UrunKatolog.sln",
+  "SelectedNode": "\\UrunKMVCWebUI\\Views\\Product\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
