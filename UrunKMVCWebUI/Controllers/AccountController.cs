@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,7 @@ namespace UrunKMVCWebUI.Controllers
             {
                 //Kayıt işlemleri
 
-                ApplicationUser user = new "();
+                var user = new ApplicationUser();
                 user.Name = model.Name;
                 user.Surname = model.SurName;
                 user.Email = model.Email;
@@ -60,6 +61,51 @@ namespace UrunKMVCWebUI.Controllers
                     ModelState.AddModelError("RegisterUserError","Kullanıcı oluşturma hatası.");
                 }
 
+            }
+
+            return View(model);
+        }
+
+
+        // GET: Account
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Login model)
+        {
+            if (ModelState.IsValid)
+            {
+                //Login işlemleri
+
+
+                var user =  UserManager.Find(model.UserName,model.Password);
+                
+                if(user != null)
+                {
+                    //Varolan kullanıcıyı sisteme dahil et.
+
+                    //ApplicationCookie oluşturup bunu sisteme bırak.
+
+                    var authManager = HttpContext.GetOwinContext().Authentication;
+
+                    var identityclaims = UserManager.CreateIdentity(user, "ApplicationCookie");
+
+                    var authProperties = new AuthenticationProperties();
+                    authProperties.IsPersistent = model.RememberMe;
+
+                    authManager.SignIn(authProperties, identityclaims);
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("LoginUserError", "Kullanıcı Bulunamadı.");
+                }
+                
             }
 
             return View(model);

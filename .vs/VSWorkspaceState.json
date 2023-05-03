@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\UrunKMVCWebUI",
+    "\\UrunKMVCWebUI\\Controllers",
     "\\UrunKMVCWebUI\\Views",
     "\\UrunKMVCWebUI\\Views\\Product"
   ],
-  "SelectedNode": "\\UrunKMVCWebUI\\Views\\Product\\Index.cshtml",
+  "SelectedNode": "\\UrunKMVCWebUI\\Controllers\\AccountController.cs",
   "PreviewInSolutionExplorer": false
 }
