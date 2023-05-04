@@ -50,9 +50,9 @@ namespace UrunKMVCWebUI.Controllers
                 if (result.Succeeded)
                 {
                     //Kullanıcı oluştu ve kullanıcıyı bir role atayabilirsiniz.
-                    if(RoleManager.RoleExists("User"))
+                    if(RoleManager.RoleExists("user"))
                     {
-                        UserManager.AddToRole(user.Id, "User");
+                        UserManager.AddToRole(user.Id, "user");
                     }
                     return RedirectToAction("Login", "Account");
                 }
@@ -109,6 +109,18 @@ namespace UrunKMVCWebUI.Controllers
             }
 
             return View(model);
+        }
+
+
+        public ActionResult Logout()
+        {
+
+            var authManager = HttpContext.GetOwinContext().Authentication;
+
+            authManager.SignOut();
+
+
+            return RedirectToAction("Index","Home");
         }
     }
 }

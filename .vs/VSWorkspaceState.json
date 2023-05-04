@@ -4,8 +4,9 @@
     "\\UrunKMVCWebUI",
     "\\UrunKMVCWebUI\\Controllers",
     "\\UrunKMVCWebUI\\Views",
+    "\\UrunKMVCWebUI\\Views\\Account",
     "\\UrunKMVCWebUI\\Views\\Product"
   ],
-  "SelectedNode": "\\UrunKMVCWebUI\\Controllers\\AccountController.cs",
+  "SelectedNode": "\\UrunKMVCWebUI\\Views\\Account\\Login.cshtml",
   "PreviewInSolutionExplorer": false
 }

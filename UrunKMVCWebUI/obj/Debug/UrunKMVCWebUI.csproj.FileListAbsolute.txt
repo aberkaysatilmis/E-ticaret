@@ -189,3 +189,5 @@ C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsof
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Newtonsoft.Json.xml
+C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
