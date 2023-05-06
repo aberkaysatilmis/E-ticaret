@@ -41,7 +41,7 @@ namespace UrunKMVCWebUI.Controllers
 
                 var user = new ApplicationUser();
                 user.Name = model.Name;
-                user.Surname = model.SurName;
+                user.SurName = model.SurName;
                 user.Email = model.Email;
                 user.UserName = model.UserName;
 
@@ -75,7 +75,7 @@ namespace UrunKMVCWebUI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Login model)
+        public ActionResult Login(Login model,string ReturnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +99,13 @@ namespace UrunKMVCWebUI.Controllers
 
                     authManager.SignIn(authProperties, identityclaims);
 
-                    return RedirectToAction("Index", "Home");
+                    if (!String.IsNullOrEmpty(ReturnUrl))
+                    {
+                       return Redirect(ReturnUrl);
+                    }
+
+                    return RedirectToAction("Index","Home");
+
                 }
                 else
                 {

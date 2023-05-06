@@ -10,6 +10,8 @@ using UrunKMVCWebUI.Entity;
 
 namespace UrunKMVCWebUI.Controllers
 {
+
+    [Authorize (Roles ="admin")]
     public class CategoryController : Controller
     {
         private DataContext db = new DataContext();

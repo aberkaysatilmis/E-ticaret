@@ -191,3 +191,5 @@ C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsof
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Newtonsoft.Json.xml
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Hosting.dll
+C:\Users\ZypraX\Desktop\Projeler\Mini-E-Commerce-Site\UrunKMVCWebUI\bin\Microsoft.Owin.Hosting.xml

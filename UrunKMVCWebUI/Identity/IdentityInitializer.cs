@@ -18,9 +18,13 @@ namespace UrunKMVCWebUI.Identity
 
             if(!context.Roles.Any(i=> i.Name == "admin"))
             {
-                var store = new RoleStore<IdentityRole>(context);
-                var manager = new RoleManager<IdentityRole>(store);
-                var role = new ApplicationRole("admin", "yönetici rolü");
+                var store = new RoleStore<ApplicationRole>(context);
+                var manager = new RoleManager<ApplicationRole>(store);
+                var role = new ApplicationRole()
+                {
+                    Name = "admin",
+                    Description = "admin rolü"
+                };
 
                 manager.Create(role);
             }
@@ -28,9 +32,13 @@ namespace UrunKMVCWebUI.Identity
 
             if(!context.Roles.Any(i=> i.Name == "user"))
             {
-                var store = new RoleStore<IdentityRole>(context);
-                var manager = new RoleManager<IdentityRole>(store);
-                var role = new ApplicationRole("user", "user rolü");
+                var store = new RoleStore<ApplicationRole>(context);
+                var manager = new RoleManager<ApplicationRole>(store);
+                var role = new ApplicationRole()
+                {
+                    Name = "user",
+                    Description = "User rolü"
+                };
                 manager.Create(role);
             }
 
@@ -41,12 +49,12 @@ namespace UrunKMVCWebUI.Identity
 
             if (!context.Roles.Any(i=> i.Name == "berkaysatilmis"))
             {
-                var store = new UserStore <IdentityUser>(context);
-                var manager = new UserManager<IdentityUser>(store);
+                var store = new UserStore <ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
                 var user = new ApplicationUser()
                 {
                     Name = "berkay",
-                    Surname = "satılmış",
+                    SurName = "satılmış",
                     UserName = "berkaysatilmis",
                     Email = "berkaysatilmis@gmail.com"
                 };
@@ -58,12 +66,12 @@ namespace UrunKMVCWebUI.Identity
 
             if (!context.Roles.Any(i => i.Name == "osmangultekin"))
             {
-                var store = new UserStore<IdentityUser>(context);
-                var manager = new UserManager<IdentityUser>(store);
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
                 var user = new ApplicationUser()
                 {
                     Name = "osman",
-                    Surname = "gültekin",
+                    SurName = "gültekin",
                     UserName = "osmangultekin",
                     Email = "osmangultekin@gmail.com"
                 };
