@@ -8,6 +8,6 @@
     "\\UrunKMVCWebUI\\Views\\Category",
     "\\UrunKMVCWebUI\\Views\\Product"
   ],
-  "SelectedNode": "\\UrunKatolog.sln",
+  "SelectedNode": "\\UrunKMVCWebUI\\Controllers\\ProductController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -57,10 +57,14 @@
             </div>
             <div class="row mt-2">
                 <div class="col-md-12">
-                    <button class="btn btn-success">
-                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
-                        Add To Cart
-                    </button>
+
+                    @using (Html.BeginForm("AddToCart","Cart"))
+                    {
+                        <input type="submit" class="btn btn-success">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                            Add To Cart
+                        </ input >
+                    }
                 </div>
             </div>
         </div>
