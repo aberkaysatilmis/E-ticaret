@@ -55,5 +55,10 @@ namespace UrunKMVCWebUI.Controllers
             return cart;
         }
 
+        public PartialViewResult Summary()
+        {
+            return PartialView(GetCart());
+        }
+
     }
 }
