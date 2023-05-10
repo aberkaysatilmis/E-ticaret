@@ -60,10 +60,12 @@
 
                     @using (Html.BeginForm("AddToCart","Cart"))
                     {
-                        <input type="submit" class="btn btn-success">
+
+                        @Html.HiddenFor(i=>i.Id)
+                        <button type="submit" class="btn btn-success">
                             <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
                             Add To Cart
-                        </ input >
+                        </button>
                     }
                 </div>
             </div>
