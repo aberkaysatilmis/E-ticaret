@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using UrunKMVCWebUI.Entity;
 
 namespace UrunKMVCWebUI.Models
 {
     public class Cart   //alışveriş sepetinin tamamını temsil eder.
     {
+
          private List<CartLine> _cartLines = new List<CartLine>();
 
         public  List<CartLine> CartLines

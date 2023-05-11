@@ -6,6 +6,7 @@
 
     #cart{
         color:white;
+        text-decoration:none;
     }
 
 </style>
@@ -13,9 +14,11 @@
 <ul class="navbar-nav my-2 my-lg-0">
 
 
-    <li id="cart" class="nav-item">
-        <i class="fa fa-cart-plus" aria-hidden="true"></i>
-        (@Model.CartLines.Count)
+    <li  class="nav-item">
+        <a href="/Cart/Index" id="cart">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            (@Model.CartLines.Count)
+        </a>
     </li>
 
 </ul>
