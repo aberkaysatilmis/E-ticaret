@@ -60,10 +60,34 @@ namespace UrunKMVCWebUI.Controllers
             return PartialView(GetCart());
         }
 
-
+        [Authorize (Roles ="user")]
         public ActionResult Checkout()
         {
             return View(new ShippingDetails());
+        }
+
+
+        [HttpPost]
+        public ActionResult Checkout(ShippingDetails entity)
+        {
+            var cart = GetCart();
+
+            if (cart.CartLines.Count==0)
+            {
+                ModelState.AddModelError("UrunYokError", "Sepetinizde ürün bulunmamaktadır.");
+            }
+            if (ModelState.IsValid)
+            {
+                //Siparişi Veritabanına kayıt et.
+                //Cart'ı temizle.
+
+                cart.Clear();
+                return View("Completed");
+            }
+            else
+            {
+                return View(entity);
+            }
         }
 
     }
