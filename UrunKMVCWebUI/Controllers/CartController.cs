@@ -79,8 +79,11 @@ namespace UrunKMVCWebUI.Controllers
             if (ModelState.IsValid)
             {
                 //Siparişi Veritabanına kayıt et.
-                //Cart'ı temizle.
 
+                SaveOrder(cart, entity);
+
+
+                //Cart'ı temizle.
                 cart.Clear();
                 return View("Completed");
             }
@@ -90,5 +93,9 @@ namespace UrunKMVCWebUI.Controllers
             }
         }
 
+        private void SaveOrder(Cart cart, ShippingDetails entity)
+        {
+            
+        }
     }
 }
