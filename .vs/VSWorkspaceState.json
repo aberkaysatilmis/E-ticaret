@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\UrunKMVCWebUI",
+    "\\UrunKMVCWebUI\\Controllers",
+    "\\UrunKMVCWebUI\\Views",
+    "\\UrunKMVCWebUI\\Views\\Account",
+    "\\UrunKMVCWebUI\\Views\\Category",
+    "\\UrunKMVCWebUI\\Views\\Product"
+  ],
+  "SelectedNode": "\\UrunKMVCWebUI\\Controllers\\CartController.cs",
+  "PreviewInSolutionExplorer": false
+}
