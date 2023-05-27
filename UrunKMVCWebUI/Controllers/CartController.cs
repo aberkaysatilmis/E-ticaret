@@ -100,7 +100,8 @@ namespace UrunKMVCWebUI.Controllers
             order.OrderNumber= "A" + (new Random()).Next(11111,99999).ToString();
             order.Total = cart.Total();
             order.OrderDate = DateTime.Now;
-            order.FullName = entity.FullName;
+            order.OrderState = EnumOrderState.Waiting;
+            order.FullName=User.Identity.Name;
             order.AdresBasligi = entity.AdresBasligi;
             order.Adres = entity.Adres;
             order.Sehir=entity.Sehir;
